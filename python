@@ -1,0 +1,26 @@
+
+str_val = "AaBbCcDd"
+upper = ""
+lower = ""
+
+for c in str_val:
+    if c.isupper():
+        upper += c
+    elif c.islower():
+        lower += c
+
+print("Заглавные буквы:", upper)
+print("Строчные буквы:", lower)
+
+arr = ['a', '1', 'b', '2', 'c', '3']
+letters = []
+digits = []
+
+for c in arr:
+    if c.isalpha():
+        letters.append(c)
+    elif c.isdigit():
+        digits.append(c)
+
+print("Буквы:", " ".join(letters))
+print("Цифры:", " ".join(digits))
