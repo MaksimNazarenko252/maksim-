@@ -1,0 +1,40 @@
+import java.util.ArrayList;
+
+public class Main {
+    public static void main(String[] args) {
+        String str = "AaBbCcDd";
+        StringBuilder upper = new StringBuilder();
+        StringBuilder lower = new StringBuilder();
+
+        for (char c : str.toCharArray()) {
+            if (Character.isUpperCase(c)) {
+                upper.append(c);
+            } else if (Character.isLowerCase(c)) {
+                lower.append(c);
+            }
+        }
+
+        System.out.println("Заглавные буквы: " + upper);
+        System.out.println("Строчные буквы: " + lower);
+
+        char[] arr = {'a','1','b','2','c','3'};
+        ArrayList<Character> letters = new ArrayList<>();
+        ArrayList<Character> digits = new ArrayList<>();
+
+        for (char c : arr) {
+            if (Character.isLetter(c)) {
+                letters.add(c);
+            } else if (Character.isDigit(c)) {
+                digits.add(c);
+            }
+        }
+
+        System.out.print("Буквы: ");
+        for (char c : letters) System.out.print(c + " ");
+        System.out.println();
+
+        System.out.print("Цифры: ");
+        for (char c : digits) System.out.print(c + " ");
+        System.out.println();
+    }
+}
