@@ -1,0 +1,35 @@
+#include <iostream>
+#include <cctype>
+using namespace std;
+
+int main() {
+    char str[] = "AaBbCcDd";
+    char upper[10], lower[10]; // массивы для хранения результата
+    int u = 0, l = 0;
+
+    for (int i = 0; str[i] != '\0'; i++) {
+        if (isupper(str[i])) upper[u++] = str[i];
+        if (islower(str[i])) lower[l++] = str[i];
+    }
+    upper[u] = '\0';
+    lower[l] = '\0';
+
+    cout << "Заглавные буквы: " << upper << endl;
+    cout << "Строчные буквы: " << lower << endl;
+
+    char arr[] = {'a','1','b','2','c','3','\0'};
+    char letters[10], digits[10];
+    int li = 0, di = 0;
+
+    for (int i = 0; arr[i] != '\0'; i++) {
+        if (isalpha(arr[i])) letters[li++] = arr[i];
+        if (isdigit(arr[i])) digits[di++] = arr[i];
+    }
+    letters[li] = '\0';
+    digits[di] = '\0';
+
+    cout << "Буквы: " << letters << endl;
+    cout << "Цифры: " << digits << endl;
+
+    return 0;
+}
