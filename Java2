@@ -1,0 +1,41 @@
+public class Main {
+    public static void main(String[] args) {
+        String str = "AaBbCcDd";
+        char[] upper = new char[str.length()];
+        char[] lower = new char[str.length()];
+        int u = 0, l = 0;
+
+        for (int i = 0; i < str.length(); i++) {
+            char c = str.charAt(i);
+            if (Character.isUpperCase(c)) {
+                upper[u++] = c;
+            } else if (Character.isLowerCase(c)) {
+                lower[l++] = c;
+            }
+        }
+
+        System.out.println("Заглавные буквы: " + new String(upper, 0, u));
+        System.out.println("Строчные буквы: " + new String(lower, 0, l));
+
+        char[] arr = {'a','1','b','2','c','3'};
+        char[] letters = new char[arr.length];
+        char[] digits = new char[arr.length];
+        int li = 0, di = 0;
+
+        for (int i = 0; i < arr.length; i++) {
+            if (Character.isLetter(arr[i])) {
+                letters[li++] = arr[i];
+            } else if (Character.isDigit(arr[i])) {
+                digits[di++] = arr[i];
+            }
+        }
+
+        System.out.print("Буквы: ");
+        for (int i = 0; i < li; i++) System.out.print(letters[i] + " ");
+        System.out.println();
+
+        System.out.print("Цифры: ");
+        for (int i = 0; i < di; i++) System.out.print(digits[i] + " ");
+        System.out.println();
+    }
+}
